@@ -10,6 +10,7 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
+    "@react-navigation/native": "^6.0.2",
     "react": "17.0.2",
     "react-native": "0.65.1",
     "styled-components": "^5.3.1"
