@@ -10,15 +10,9 @@ import Settings from '../pages/Settings/settings.screen';
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
-const Dashboard: React.FC = () => {
-  return;
-};
-
 const App: React.FC = () => (
-  <Stack.Navigator
-    initialRouteName="dashboard"
-    screenOptions={{headerShown: false}}>
-    <Stack.Screen name="dashboard" component={Dashboard} />
+  <Stack.Navigator>
+    <Stack.Screen name="dashboard" component={Home} />
     <Stack.Screen name="settings" component={Settings} />
   </Stack.Navigator>
 );

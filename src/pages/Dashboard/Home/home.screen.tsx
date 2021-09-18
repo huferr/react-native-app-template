@@ -1,7 +1,8 @@
 import React from 'react';
+import {Text} from 'react-native';
 
 const Home: React.FC = () => {
-  return 'teste';
+  return <Text>Home</Text>;
 };
 
 export default Home;
