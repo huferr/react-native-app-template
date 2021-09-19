@@ -6,13 +6,69 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 import Home from '../pages/Dashboard/Home/home.screen';
 import Settings from '../pages/Settings/settings.screen';
+import Profile from '../pages/Dashboard/Profile/profile.screen';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
+const Dashboard: React.FC = () => {
+  return (
+    <Tab.Navigator
+      screenOptions={{
+        tabBarShowLabel: false,
+        tabBarActiveTintColor: 'black',
+        tabBarInactiveTintColor: 'grayLight',
+        headerShown: false,
+        tabBarItemStyle: {
+          // paddingVertical: isIos() ? 30 : 0,
+        },
+        tabBarStyle: {
+          // height: !isIos() ? 65 : 61 + bottomSpace,
+          borderTopColor: 'transparent',
+          shadowColor: 'rgba(0,0,0,0.05)',
+          shadowOffset: {width: 0, height: 0},
+          shadowRadius: 15,
+          elevation: 25,
+          shadowOpacity: 25,
+          opacity: 25,
+        },
+        lazy: false,
+      }}>
+      <Tab.Screen
+        name="home"
+        component={Home}
+        options={{
+          // tabBarIcon:,
+          headerShown: false,
+        }}
+      />
+      <Tab.Screen
+        name="settings"
+        component={Settings}
+        options={
+          {
+            // tabBarIcon:,
+          }
+        }
+      />
+      <Tab.Screen
+        name="profile"
+        component={Profile}
+        options={
+          {
+            // tabBarIcon:,
+          }
+        }
+      />
+    </Tab.Navigator>
+  );
+};
+
 const App: React.FC = () => (
-  <Stack.Navigator>
-    <Stack.Screen name="dashboard" component={Home} />
+  <Stack.Navigator
+    initialRouteName="dashboard"
+    screenOptions={{headerShown: false}}>
+    <Stack.Screen name="dashboard" component={Dashboard} />
     <Stack.Screen name="settings" component={Settings} />
   </Stack.Navigator>
 );
