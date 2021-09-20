@@ -3,12 +3,14 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 // pages
-
 import Home from '../pages/Dashboard/Home/home.screen';
 import Settings from '../pages/Settings/settings.screen';
 import Profile from '../pages/Dashboard/Profile/profile.screen';
 import HomeIcon from '../assets/icons/home';
+
+// helpers
 import colors from '../styles/colors';
+import ProfileIcon from '../assets/icons/profile';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -56,11 +58,9 @@ const Dashboard: React.FC = () => {
       <Tab.Screen
         name="profile"
         component={Profile}
-        options={
-          {
-            // tabBarIcon:,
-          }
-        }
+        options={{
+          tabBarIcon: ({color}) => <ProfileIcon fill={color} />,
+        }}
       />
     </Tab.Navigator>
   );
