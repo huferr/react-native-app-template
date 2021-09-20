@@ -8,6 +8,7 @@ import Home from '../pages/Dashboard/Home/home.screen';
 import Settings from '../pages/Settings/settings.screen';
 import Profile from '../pages/Dashboard/Profile/profile.screen';
 import HomeIcon from '../assets/icons/home';
+import colors from '../styles/colors';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -17,8 +18,8 @@ const Dashboard: React.FC = () => {
     <Tab.Navigator
       screenOptions={{
         tabBarShowLabel: false,
-        tabBarActiveTintColor: '#000',
-        tabBarInactiveTintColor: '#9c9c9c',
+        tabBarActiveTintColor: colors.black,
+        tabBarInactiveTintColor: colors.grayLight,
         headerShown: false,
         tabBarItemStyle: {
           // paddingVertical: isIos() ? 30 : 0,
@@ -39,7 +40,7 @@ const Dashboard: React.FC = () => {
         name="home"
         component={Home}
         options={{
-          tabBarIcon: () => <HomeIcon />,
+          tabBarIcon: ({color}) => <HomeIcon fill={color} />,
           headerShown: false,
         }}
       />
