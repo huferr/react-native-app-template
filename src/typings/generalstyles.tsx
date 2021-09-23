@@ -1,0 +1,32 @@
+export interface GeneralStyleProps {
+  display?: string;
+  flex?: number;
+  alignItems?: string;
+  justifyContent?: string;
+  width?: number | string;
+  height?: number | string;
+  padding?: number;
+  backgroundColor?: string;
+  alignSelf?: string;
+  textAlign?: string;
+  fontFamily?: string;
+  fontSize?: number;
+  fontWeight?: number;
+  color?: string;
+  letterSpacing?: number;
+  marginTop?: number;
+  marginRight?: number;
+  marginBottom?: number | string;
+  marginLeft?: number;
+  paddingTop?: number;
+  paddingRight?: number;
+  paddingBottom?: number;
+  paddingLeft?: number | string;
+  borderRadius?: number;
+  bold?: boolean;
+  borderLeftWidth?: string;
+  borderLeftColor?: string;
+  paddingVertical?: number;
+  paddingHorizontal?: number;
+  opacity?: number;
+}
