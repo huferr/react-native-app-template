@@ -1,7 +1,6 @@
 import React from 'react';
 import {Text} from 'react-native';
-import {Container} from '../../../styles/general';
-import {Scroll} from './home.styles';
+import {Container, Scroll} from '../../../styles/general';
 
 const Home: React.FC = () => {
   return (
