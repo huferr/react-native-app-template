@@ -1,8 +1,8 @@
 import React from 'react';
-import App from './app.routes';
+import AppScreens from './app.routes';
 
 const Routes: React.FC = () => {
-  return <App />;
+  return <AppScreens />;
 };
 
 export default Routes;

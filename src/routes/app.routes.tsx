@@ -9,7 +9,7 @@ import InformationIcon from '../assets/icons/information';
 
 // pages
 import Home from '../pages/Dashboard/Home/home.screen';
-import informations from '../pages/Informations/informations.screen';
+import informations from '../pages/Dashboard/Informations/informations.screen';
 import Profile from '../pages/Dashboard/Profile/profile.screen';
 
 // helpers
@@ -69,7 +69,7 @@ const Dashboard: React.FC = () => {
   );
 };
 
-const App: React.FC = () => (
+const AppScreens: React.FC = () => (
   <Stack.Navigator
     initialRouteName="dashboard"
     screenOptions={{headerShown: false}}>
@@ -78,4 +78,4 @@ const App: React.FC = () => (
   </Stack.Navigator>
 );
 
-export default App;
+export default AppScreens;
