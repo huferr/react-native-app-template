@@ -2,15 +2,18 @@ import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
+// assets
+import HomeIcon from '../assets/icons/home';
+import ProfileIcon from '../assets/icons/profile';
+import InformationIcon from '../assets/icons/information';
+
 // pages
 import Home from '../pages/Dashboard/Home/home.screen';
-import Settings from '../pages/Settings/settings.screen';
+import informations from '../pages/Informations/informations.screen';
 import Profile from '../pages/Dashboard/Profile/profile.screen';
-import HomeIcon from '../assets/icons/home';
 
 // helpers
 import colors from '../styles/colors';
-import ProfileIcon from '../assets/icons/profile';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -48,18 +51,18 @@ const Dashboard: React.FC = () => {
       />
       <Tab.Screen
         name="settings"
-        component={Settings}
-        options={
-          {
-            // tabBarIcon:,
-          }
-        }
+        component={informations}
+        options={{
+          tabBarIcon: ({color}) => <InformationIcon fill={color} />,
+          headerShown: false,
+        }}
       />
       <Tab.Screen
         name="profile"
         component={Profile}
         options={{
           tabBarIcon: ({color}) => <ProfileIcon fill={color} />,
+          headerShown: false,
         }}
       />
     </Tab.Navigator>
@@ -71,7 +74,7 @@ const App: React.FC = () => (
     initialRouteName="dashboard"
     screenOptions={{headerShown: false}}>
     <Stack.Screen name="dashboard" component={Dashboard} />
-    <Stack.Screen name="settings" component={Settings} />
+    <Stack.Screen name="informations" component={informations} />
   </Stack.Navigator>
 );
 
