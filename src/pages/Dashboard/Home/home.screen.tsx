@@ -8,10 +8,7 @@ const Home: React.FC = () => {
     <Container>
       <Scroll>
         <Text>Home</Text>
-        <Card height={100}>
-          <Text>dsadsad</Text>
-          <Text>dsadsad</Text>
-        </Card>
+        <Card height={100} title="testando" />
       </Scroll>
     </Container>
   );

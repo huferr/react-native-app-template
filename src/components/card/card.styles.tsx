@@ -9,3 +9,12 @@ export const CardContainer = styled.View<GeneralStyleProps>`
   border-radius: ${metrics.baseRadius}px;
   background-color: ${colors.grayRegular};
 `;
+
+export const Header = styled.View`
+  width: 100%;
+  height: 30px;
+`;
+
+export const Title = styled.Text`
+  font-size: 20px;
+`;
