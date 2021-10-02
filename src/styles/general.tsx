@@ -5,7 +5,7 @@ import metrics from './metrics';
 
 export const Container = styled.SafeAreaView<GeneralStyleProps>`
   flex: ${props => props.flex || 1};
-  background-color: ${colors.whiteLight};
+  background-color: ${colors.grayRegular};
 `;
 
 export const Scroll = styled.ScrollView`

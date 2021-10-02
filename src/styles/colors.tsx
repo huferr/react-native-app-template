@@ -7,9 +7,10 @@ export default {
 
   white: '#ffffff',
   whiteLight: '#f8f9fb',
+  whiteDarker: '#878787',
   gray: '#f3f4f9',
   grayLight: '#c3c6db',
-  grayRegular: '#9ea1b9',
-  grayMedium: '#757893',
+  grayRegular: '#444444',
+  grayMedium: '#222222',
   black: '#000000',
 };

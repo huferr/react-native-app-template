@@ -23,11 +23,12 @@ const Dashboard: React.FC = () => {
     <Tab.Navigator
       screenOptions={{
         tabBarShowLabel: false,
-        tabBarActiveTintColor: colors.black,
-        tabBarInactiveTintColor: colors.grayLight,
+        tabBarActiveTintColor: colors.white,
+        tabBarInactiveTintColor: colors.whiteDarker,
         headerShown: false,
         tabBarStyle: {
           height: 65,
+          backgroundColor: colors.grayMedium,
           borderTopColor: 'transparent',
           shadowColor: 'rgba(0,0,0,0.05)',
           shadowOffset: {width: 0, height: 0},
