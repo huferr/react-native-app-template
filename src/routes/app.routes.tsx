@@ -26,11 +26,8 @@ const Dashboard: React.FC = () => {
         tabBarActiveTintColor: colors.black,
         tabBarInactiveTintColor: colors.grayLight,
         headerShown: false,
-        tabBarItemStyle: {
-          // paddingVertical: isIos() ? 30 : 0,
-        },
         tabBarStyle: {
-          // height: !isIos() ? 65 : 61 + bottomSpace,
+          height: 65,
           borderTopColor: 'transparent',
           shadowColor: 'rgba(0,0,0,0.05)',
           shadowOffset: {width: 0, height: 0},
