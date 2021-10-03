@@ -15,10 +15,14 @@ const Home: React.FC = () => {
           <Title>
             Welcome to app template, <UserName>{userName}!</UserName>
           </Title>
-          <Card height={100} title="Card #1" marginBottom={20} />
-          <Card height={100} title="Card #2" marginBottom={20} />
-          <Card height={100} title="Card #3" marginBottom={20} />
-          <Card height={100} title="Card #3" marginBottom={20} />
+          <Card
+            title="Card #1"
+            text="Clique neste card para saber mais sobre o App template"
+            marginBottom={20}
+          />
+          <Card title="Card #2" marginBottom={20} />
+          <Card title="Card #3" marginBottom={20} />
+          <Card title="Card #3" marginBottom={20} />
         </Scroll>
       </Container>
       {OpenModal && (

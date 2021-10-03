@@ -1,8 +1,7 @@
 import {GeneralStyleProps} from '../../typings/generalstyles';
 
 interface CardProps extends GeneralStyleProps {
-  width?: number | string;
-  height?: number | string;
   title?: string;
+  text?: string;
   children?: Element | undefined;
 }

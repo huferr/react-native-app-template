@@ -1,9 +1,9 @@
 import React from 'react';
-import {CardContainer, Header, Title} from './card.styles';
+import {CardContainer, Header, Text, Title} from './card.styles';
 import {CardProps} from './card.types';
 
 const Card: React.FC<CardProps> = props => {
-  const {title, children} = props;
+  const {title, text, children} = props;
 
   return (
     <CardContainer {...props}>
@@ -14,7 +14,7 @@ const Card: React.FC<CardProps> = props => {
           </Header>
         </>
       )}
-
+      {text && <Text>{text}</Text>}
       {children}
     </CardContainer>
   );
