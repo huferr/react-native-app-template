@@ -1,11 +1,12 @@
 import React from 'react';
 import {CardContainer, Header, Title} from './card.styles';
+import {CardProps} from './card.types';
 
 const Card: React.FC<CardProps> = props => {
-  const {width, height, title, children} = props;
+  const {title, children} = props;
 
   return (
-    <CardContainer width={width} height={height}>
+    <CardContainer {...props}>
       {title && (
         <>
           <Header>
